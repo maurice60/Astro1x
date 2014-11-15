@@ -6,6 +6,7 @@ c <- 3e8 # Speed of light in a vacuum
 eV <- 1.6e-19 # electron volt J
 ep <- 1e-3 # present day mean energy of photons eV
 rho0 <- 5e-28 # present day density of universe
+Ep <- 1.2e28*eV #Planck energy
 
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180
@@ -18,11 +19,11 @@ f <- function(L, D) L / (4*pi*D^2)
 D <- function(f, L) sqrt(L/(4*pi*f))
 # Distance given flux ratio
 Dr <- function(D, r) D*sqrt(r)
-# Size given distance and angle
+# Size given distance and angle (angle in radians)
 S <- function(r, th) r*th
-# Angle given distance and size
-th <- function(r, S) S/r
-# Distance given size and angle
+# Angle given distance and size (angle in radians)
+th <- function(r, S) S/r 
+# Distance given size and angle (angle in radians)
 Da <- function(S, th) S/th
 # Distance given angular size ratio
 Dar <- function(D, r) D*r
