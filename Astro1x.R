@@ -3,6 +3,9 @@ Mpc <- 3.09e22 # Megaparsec in m
 Ls <- 3.839e26 # Luminosity of the Sun
 AU <- 1.496e11 # Astronomical unit in m
 c <- 3e8 # Speed of light in a vacuum
+eV <- 1.6e-19 # electron volt J
+ep <- 1e-3 # present day mean energy of photons eV
+rho0 <- 5e-28 # present day density of universe
 
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180
@@ -27,4 +30,15 @@ Dar <- function(D, r) D*r
 z <- function(Wo, Wl) (Wo - Wl)/Wl
 # Speed given redshift
 v <- function(z) z * c
-
+# Redshift given scale factor
+zs <- function(at) (1-at)/at
+# Scale factor given redshift
+at <- function(z) 1/(1+z)
+# Energy of photons at some time in the past given scale factor
+et <- function(a) ep*eV/a
+# scale factor given energy
+ae <- function(e) ep*eV/e
+# Density of universe given redshift
+rho <- function(z) rho0*(1+z)^3
+# Redshift given energy of typical photon
+zsf <- function(e) zs(ae(e))
