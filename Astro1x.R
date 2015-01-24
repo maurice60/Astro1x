@@ -43,3 +43,6 @@ ae <- function(e) ep*eV/e
 rho <- function(z) rho0*(1+z)^3
 # Redshift given energy of typical photon
 zsf <- function(e) zs(ae(e))
+# Age of universe given redshift and distance
+At <- function(D, z) D/(c*z)
+
