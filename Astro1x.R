@@ -7,6 +7,8 @@ eV <- 1.6e-19 # electron volt J
 ep <- 1e-3 # present day mean energy of photons eV
 rho0 <- 5e-28 # present day density of universe
 Ep <- 1.2e28*eV #Planck energy
+kWh <- 3.6e6 # J in a kW/h
+G <- 6.67384e-11 # Gravitational constant
 
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180
@@ -43,6 +45,10 @@ ae <- function(e) ep*eV/e
 rho <- function(z) rho0*(1+z)^3
 # Redshift given energy of typical photon
 zsf <- function(e) zs(ae(e))
-# Age of universe given redshift and distance
+# Age of universe given redshift and distance of object
 At <- function(D, z) D/(c*z)
+# Flux taking redshift into account
+fz <- function(L, D, z) f(L, D)*at(z)^2
+# gravitational potential energy
+pe <- function(m1, m2, r) -(G*m1*m2)/r
 
