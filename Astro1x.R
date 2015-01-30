@@ -51,4 +51,5 @@ At <- function(D, z) D/(c*z)
 fz <- function(L, D, z) f(L, D)*at(z)^2
 # gravitational potential energy
 pe <- function(m1, m2, r) -(G*m1*m2)/r
-
+# Beaming angle
+theta <- function(v) sqrt(1-(v/c)^2)
