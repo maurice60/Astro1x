@@ -1,5 +1,6 @@
 pc <- 3.09e16 # Parsec to m
 Mpc <- 3.09e22 # Megaparsec in m
+ms <- 2e30 # Mass of the sun
 Ls <- 3.839e26 # Luminosity of the Sun
 AU <- 1.496e11 # Astronomical unit in m
 c <- 3e8 # Speed of light in a vacuum
@@ -53,3 +54,9 @@ fz <- function(L, D, z) f(L, D)*at(z)^2
 pe <- function(m1, m2, r) -(G*m1*m2)/r
 # Beaming angle
 theta <- function(v) sqrt(1-(v/c)^2)
+# Observed flux
+ofl <- function(thet) 4/thet^2
+# Central mass given orbital velocity and radius
+M <- function(v, r) v^2*r/G
+# Mass given flux 
+Mf <- function(f, D) 4*ms*4*pi*D^2*f/Ls
