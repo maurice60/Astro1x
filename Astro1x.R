@@ -56,7 +56,7 @@ pe <- function(m1, m2, r) -(G*m1*m2)/r
 theta <- function(v) sqrt(1-(v/c)^2)
 # Observed flux
 ofl <- function(thet) 4/thet^2
-# Central mass given orbital velocity and radius
+# Central mass given orbital velocity and radius. Radius from S above.
 M <- function(v, r) v^2*r/G
 # Mass given flux 
 Mf <- function(f, D) 4*ms*4*pi*D^2*f/Ls
