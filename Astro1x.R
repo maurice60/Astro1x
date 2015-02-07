@@ -10,6 +10,7 @@ rho0 <- 5e-28 # present day density of universe
 Ep <- 1.2e28*eV #Planck energy
 kWh <- 3.6e6 # J in a kW/h
 G <- 6.67384e-11 # Gravitational constant
+sb <- 5.67e-8 #Stefan-Boltzmann constant
 
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180
@@ -60,3 +61,5 @@ ofl <- function(thet) 4/thet^2
 M <- function(v, r) v^2*r/G
 # Mass given flux 
 Mf <- function(f, D) 4*ms*4*pi*D^2*f/Ls
+# Temperature at surface of planet
+pT <- function(L, D) (L/(16*pi*sb*D^2))^.25
