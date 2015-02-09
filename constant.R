@@ -11,7 +11,8 @@ Ep <- 1.2e28*eV #Planck energy
 kWh <- 3.6e6 # J in a kW/h
 G <- 6.67384e-11 # Gravitational constant
 sb <- 5.67e-8 #Stefan-Boltzmann constant
-ly <- c*60*60*24*365 #Light year
+ys <- 60*60*24*365 #Year of seconds
+ly <- c*ys #Light year
 
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180
