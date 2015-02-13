@@ -21,3 +21,10 @@ vd <- function(ds, w) ds*c/w
 pR <- function(star, dip) star * sqrt(dip)
 # Temperature at surface of planet given luminosity of star and distance
 pT <- function(L, D) (L/(16*pi*sb*D^2))^.25
+
+# Gravitational microlens angle due to passing r away from M
+theta <- function(r, M) 4*G*M/(r*c^2)
+# Einstein radius distance D mass M
+er <- function(D, M) sqrt(4*G*M/(D*c^2))
+# Mass given distance to far object and Einstein radius
+eM <- function(D, e) D*c^2*e^2/(4*G)
