@@ -35,3 +35,8 @@ Tl <- function(lPeak) b / lPeak
 dT <- function(L, T) sqrt(L/(16*pi*sb*T^4))
 # Number of grains radius r at distance D intercepting f of the star's output
 nG <- function(r, D, f) 4*D^2*f/r^2
+
+# Diffraction limit
+lim <- function(l, d) l/d
+# The ratio of the brightness of a planet (of radius r ) to its star proportion luminosity p
+bps = function(r, d, p = 1) p*r^2/(4*d^2)
