@@ -28,3 +28,10 @@ theta <- function(r, M) 4*G*M/(r*c^2)
 er <- function(D, M) sqrt(4*G*M/(D*c^2))
 # Mass given distance to far object and Einstein radius
 eM <- function(D, e) D*c^2*e^2/(4*G)
+
+# Temperature for peak wavelength
+Tl <- function(lPeak) b / lPeak
+# Distance given tenp & luminosity of parent star
+dT <- function(L, T) sqrt(L/(16*pi*sb*T^4))
+# Number of grains radius r at distance D intercepting f of the star's output
+nG <- function(r, D, f) 4*D^2*f/r^2
