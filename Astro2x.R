@@ -40,3 +40,8 @@ nG <- function(r, D, f) 4*D^2*f/r^2
 lim <- function(l, d) l/d
 # The ratio of the brightness of a planet (of radius r ) to its star proportion luminosity p
 bps = function(r, d, p = 1) p*r^2/(4*d^2)
+
+# (Rough) estimate of gravitational energy available at planet formation
+U <- function(r, M) G*M^2/(4*r)
+# planetary radius given temperature and luminosity
+pRad <- function(T, L) sqrt(L/(4*pi*sb*T^4))
