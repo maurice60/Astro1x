@@ -14,6 +14,7 @@ sb <- 5.67e-8 #Stefan-Boltzmann constant
 ys <- 60*60*24*365 #Year of seconds
 ly <- c*ys #Light year
 b <- 2.9e-3 # Constant of proportioality for lPeak and tenperature (Wein's displacement law)
+k <- 1.38e-23 #Boltzmann constant
 
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180

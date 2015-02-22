@@ -45,3 +45,10 @@ bps = function(r, d, p = 1) p*r^2/(4*d^2)
 U <- function(r, M) G*M^2/(4*r)
 # planetary radius given temperature and luminosity
 pRad <- function(T, L) sqrt(L/(4*pi*sb*T^4))
+
+#Speed of an atom or molecule at temp T mass m in atmosphere
+vAtmos <- function(m, T) sqrt(3*k*T/m)
+#Escape velity from planet mass M radius r
+vEsc <- function(r, M) sqrt(2*G*M/r)
+#Height of mountains given relative sizes
+hMou <- function(rRel, mRel, hStan) hStan*rRel^2/mRel
