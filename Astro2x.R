@@ -17,7 +17,7 @@ dop <- function(v, w) v*w/c
 # Velocity given doppler shift and wavelength
 vd <- function(ds, w) ds*c/w
 
-# Radius of planet given star radius and dip in brightness
+# Radius of planet given star radius and dip in brightness (delta B/B)
 pR <- function(star, dip) star * sqrt(dip)
 # Temperature at surface of planet given luminosity of star and distance
 pT <- function(L, D) (L/(16*pi*sb*D^2))^.25
