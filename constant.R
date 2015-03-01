@@ -1,6 +1,6 @@
 pc <- 3.09e16 # Parsec to m
 Mpc <- 3.09e22 # Megaparsec in m
-ms <- 2e30 # Mass of the sun
+ms <- 1.989e30 # Mass of the sun
 Ls <- 3.839e26 # Luminosity of the Sun
 AU <- 1.496e11 # Astronomical unit in m
 c <- 3e8 # Speed of light in a vacuum
