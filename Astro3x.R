@@ -15,3 +15,18 @@ findCompanion <- function(P, m1, r1) {
 
 # Radius of companion star
 rC <- function(rA, lA, tA, lB, tB) rA*sqrt(lB/lA)*(tA/tB)^2
+# Central pressure in white dwarf radius R, density rho
+pC <- function(rho, R) 2*pi*G*rho^2*R^2/3
+
+# Orbital radius of gas cloud, velocity vg around a star of mass Ms (Ms >> m gas)
+rG <- function(Ms, vg) G*Ms/vg^2
+# Orbital radius of white dwarf, velocity vWD around a star of mass Ms (Ms ~ m WD)
+rWD <- function(Ms, vWD) G*Ms/(4*vWD^2)
+
+# The cumulative force of all the photons flooding out from an object of luminosity L and hitting one electron a distance D away
+Fphot <- function(L, D) L * sigt / (4*pi*D^2*c)
+# Eddington luminosity
+LEdd <- function(mWD) 4*pi*G*mWD*mp*c/sigt
+
+# Mass at Eddington lminosity
+mEdd = function(L) L*sigt / (4*pi*G*mp*c)

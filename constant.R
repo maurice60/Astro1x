@@ -15,6 +15,9 @@ ys <- 60*60*24*365 #Year of seconds
 ly <- c*ys #Light year
 b <- 2.9e-3 # Constant of proportioality for lPeak and tenperature (Wein's displacement law)
 k <- 1.38e-23 #Boltzmann constant
+mp <- 1.67e-27 # Proton mass
+sigt <- 6.7e-29 # Thompson cross section
+h <- 6.63e-34 # Planck constant
 
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180
