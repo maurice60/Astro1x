@@ -30,6 +30,7 @@ LEdd <- function(mWD) 4*pi*G*mWD*mp*c/sigt
 
 # Mass at Eddington lminosity
 mEdd = function(L) L*sigt / (4*pi*G*mp*c)
+<<<<<<< HEAD
 
 # Redshift
 z <- function(obs, lab) (obs - lab) / lab
@@ -39,3 +40,5 @@ vGas <- function(e, a) (e - a) * c / e
 
 
 
+=======
+>>>>>>> 95103557c2e91c0330a5ce8fe8b01b98fdec9554
