@@ -30,7 +30,6 @@ LEdd <- function(mWD) 4*pi*G*mWD*mp*c/sigt
 
 # Mass at Eddington lminosity
 mEdd = function(L) L*sigt / (4*pi*G*mp*c)
-<<<<<<< HEAD
 
 # Redshift
 z <- function(obs, lab) (obs - lab) / lab
@@ -38,7 +37,15 @@ z <- function(obs, lab) (obs - lab) / lab
 # Speed of gas emitted wavelength e absorbed wavelength a
 vGas <- function(e, a) (e - a) * c / e
 
+# neutrino flux due to formation of neutron star D away
+fN <- function(D) 1e57/(4*pi*D^2)
+fQ <- function(n, D) n/(4*pi*D^2)
+tO <- function(n, D) n*4*pi*D^2
 
+# number of molecules w weight of substance Z atomic weight
+nMol <- function(w, Z) w / Z
 
-=======
->>>>>>> 95103557c2e91c0330a5ce8fe8b01b98fdec9554
+# number of interactions, m molecules f flux
+nInt <- function(m, f) 1e-47 * m * f
+xArea <- function(n, m, f) n / (m * f)
+fInc <- function(n, m, a) n / (m * a)
