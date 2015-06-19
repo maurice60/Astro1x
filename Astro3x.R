@@ -49,3 +49,20 @@ nMol <- function(w, Z) w / Z
 nInt <- function(m, f) 1e-47 * m * f
 xArea <- function(n, m, f) n / (m * f)
 fInc <- function(n, m, a) n / (m * a)
+
+# Minimum radius of spin mass M, period P
+rMin <- function(M, P) (G*M*P^2/(4*pi^2))^(1/3)
+pMin <- function(M, r) sqrt(4*pi^2*r^3/(G*M))
+
+# Lorentx transfom
+gamma <- function(v) 1 / sqrt(1 - (v/c)^2)
+xPrime <- function(x, v, t) gamma(v) * (x + v*t)
+tPrime <- function(x, v, t) gamma(v) * (t + (v*x/c^2))
+# Time dilation
+tTarg <- function(D, v) D  / (v * gamma(v))
+
+# Schwartzschild radius
+rSch <- function(M) 2*G*M/c^2
+# Superluminal motion at a fraction β of the speed of light at an angle of θ to the line of sight (in radians)
+vApp <- function(beta, theta) (beta * sin(theta) / (1 - beta * cos(theta))) * c
+
