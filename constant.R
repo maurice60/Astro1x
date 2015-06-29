@@ -18,7 +18,7 @@ k <- 1.38e-23 #Boltzmann constant
 mp <- 1.67e-27 # Proton mass
 sigt <- 6.7e-29 # Thompson cross section
 h <- 6.63e-34 # Planck constant
-
+Ho <- 2.27e-18 # Hubble constant
 # Degreees to radians / radians to degrees
 rad <- function(d) d*pi/180
 deg <- function(r) r*180/pi
